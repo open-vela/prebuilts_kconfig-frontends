@@ -834,7 +834,8 @@ pkgconfig_DATA = libs/parser/kconfig-parser.pc
 @COND_gconf_TRUE@frontends_gconf_kconfig_gconf_CFLAGS = \
 @COND_gconf_TRUE@	$(AM_CFLAGS) \
 @COND_gconf_TRUE@	$(kf_CFLAGS) \
-@COND_gconf_TRUE@	$(gtk_CFLAGS)
+@COND_gconf_TRUE@	$(gtk_CFLAGS) \
+@COND_gconf_TRUE@	-Wno-deprecated-declarations
 
 @COND_gconf_TRUE@frontends_gconf_kconfig_gconf_LDADD = \
 @COND_gconf_TRUE@	$(top_builddir)/libs/parser/libkconfig-parser.la \
